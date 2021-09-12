@@ -56,7 +56,14 @@ source schema.sql;
 
 source seeds.sql;
 
+exit
+
+touch .env
+
 ```
+
+Must set up your .env to manage your connection to your mySQL instance.
+
 _ _ _ _
 
 ## Tests
