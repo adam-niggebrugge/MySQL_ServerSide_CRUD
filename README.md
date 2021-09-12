@@ -50,6 +50,12 @@ npm install mysql2
 
 npm install express
 
+mysql -u root -p <your password>
+
+source schema.sql;
+
+source seeds.sql;
+
 ```
 _ _ _ _
 
