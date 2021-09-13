@@ -17,4 +17,5 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
+//Start asking the user what they want to do.
 interface.prompt();
