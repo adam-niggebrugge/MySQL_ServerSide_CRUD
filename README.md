@@ -50,6 +50,8 @@ npm install mysql2
 
 npm install express
 
+npm install sequelize
+
 mysql -u root -p <your password>
 
 source schema.sql;
