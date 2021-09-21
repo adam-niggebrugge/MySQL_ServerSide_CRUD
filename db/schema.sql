@@ -35,6 +35,21 @@ CREATE TABLE role (
   PRIMARY KEY (id)
 );
 
+-- Creates the table "manager" normalize the concept because managers doesn't have any
+
+CREATE TABLE manager (
+  -- Creates a numeric column called "id" --
+  id INT NOT NULL AUTO_INCREMENT,
+  -- Makes a string column called "name" which cannot contain null --
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  role_id INT,
+  FOREIGN KEY (role_id) 
+    REFERENCES role(id)
+    ON DELETE SET NULL,
+  PRIMARY KEY (id)
+); 
+
 -- Creates the table "employee" that contains the personal info of people working at the business within humanResource_db --
 
 CREATE TABLE employee (
@@ -49,7 +64,7 @@ CREATE TABLE employee (
     REFERENCES role(id)
     ON DELETE SET NULL,
   FOREIGN KEY (manager_id)
-    REFERENCES employee(id)
+    REFERENCES manager(id)
     ON DELETE SET NULL,
   PRIMARY KEY (id)
 ); 
