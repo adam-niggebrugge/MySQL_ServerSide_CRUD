@@ -1,3 +1,4 @@
+USE humanResource_db;
 
 INSERT INTO department (name)
 VALUES   ("Sales")
@@ -5,7 +6,7 @@ VALUES   ("Sales")
  ,       ("Engineering")
  ,       ("Accounting")
  ,       ("Customer Service")
- ;
+; 
 
 
 INSERT INTO role (title, salary, department_id)
@@ -27,15 +28,23 @@ VALUES
  ;
 
 
+
+-- seed managers
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES  
+    ("Ella","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Customer Service")))
+,   ("Ella","Dog", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Receiving")))
+,   ("Rachel","Meow", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Engineering")))
+,   ("Meredith","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Accounting")))
+,   ("Rachel","Cat", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Sales")))
+;
+
+
+
+-- after managers seeded give them employees
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES  
-    ("Ella","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Customer Service") ) , null)
-,   ("Ella","Dog", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Receiving")) , null)
-,   ("Rachel","Meow", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Engineering")), null)
-,   ("Meredith","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Accounting")), null)
-,   ("Rachel","Cat", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Sales")), null)
-
-,   ("Adam","Nick", (SELECT id FROM role WHERE title = "Senior Consultant" AND department_id = (SELECT id FROM department WHERE name="Sales")), (SELECT id FROM employee WHERE role_id = (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Sales"))))
+   ("Adam","Nick", (SELECT id FROM role WHERE title = "Senior Consultant" AND department_id = (SELECT id FROM department WHERE name="Sales")), (SELECT id FROM employee WHERE role_id = (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Sales"))))
 ,   ("Anthony","Sole", (SELECT id FROM role WHERE title = "Senior Consultant" AND department_id = (SELECT id FROM department WHERE name="Customer Service")), (SELECT id FROM employee WHERE role_id = (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Customer Service"))))
 ,   ("Matt","Meyer", (SELECT id FROM role WHERE title = "Senior Consultant" AND department_id = (SELECT id FROM department WHERE name="Engineering")), (SELECT id FROM employee WHERE role_id = (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Engineering"))))
 
