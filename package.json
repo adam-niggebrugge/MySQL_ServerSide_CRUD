@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/adam-niggebrugge/MySQL_ServerSide_CRUD#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "inquirer": "^6.3.1"
+
   }
 }

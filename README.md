@@ -50,13 +50,22 @@ npm install mysql2
 
 npm install express
 
+npm install sequelize
+
 mysql -u root -p <your password>
 
 source schema.sql;
 
 source seeds.sql;
 
+exit
+
+touch .env
+
 ```
+
+Must set up your .env to manage your connection to your mySQL instance.
+
 _ _ _ _
 
 ## Tests
