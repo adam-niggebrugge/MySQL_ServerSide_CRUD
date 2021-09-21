@@ -51,7 +51,11 @@ npm install mysql2
 npm install express
 
 npm install sequelize
+```
 
+Be sure to navigate to the folder location of the database scripts prior to executing the next commands.
+
+```
 mysql -u root -p <your password>
 
 source schema.sql;
