@@ -18,4 +18,4 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 //Start asking the user what they want to do.
-interface.prompt();
+interface.init();
