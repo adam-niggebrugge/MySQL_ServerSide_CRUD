@@ -1,9 +1,9 @@
 const express = require('express');
 const sequelize = require('./config/connection');
-const interface = require('./lib/interface');
-
-const PORT = process.env.PORT || 3001;
+const Interface = require('./lib/interface');
+const interface = new Interface();
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
