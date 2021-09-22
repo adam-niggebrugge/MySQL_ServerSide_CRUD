@@ -48,9 +48,9 @@ npm install inquirer
 
 npm install mysql2
 
-npm install express
-
 npm install sequelize
+
+npm install dotenv
 ```
 
 Be sure to navigate to the folder location of the database scripts prior to executing the next commands.
