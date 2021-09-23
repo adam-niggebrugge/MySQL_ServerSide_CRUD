@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "TODO",
-    "start": "node server.js"
+    "start": "node ./lib/interface.js"
   },
   "repository": {
     "type": "git",
@@ -13,8 +13,7 @@
   },
   "keywords": [
     "inquirer",
-    "mysql2",
-    "express"
+    "mysql2"
   ],
   "author": "NAI",
   "license": "MIT",
@@ -23,8 +22,8 @@
   },
   "homepage": "https://github.com/adam-niggebrugge/MySQL_ServerSide_CRUD#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "inquirer": "^6.3.1",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
