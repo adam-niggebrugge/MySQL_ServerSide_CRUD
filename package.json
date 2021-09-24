@@ -13,7 +13,9 @@
   },
   "keywords": [
     "inquirer",
-    "mysql2"
+    "mysql2",
+    "dotenv",
+    "sequelize"
   ],
   "author": "NAI",
   "license": "MIT",
