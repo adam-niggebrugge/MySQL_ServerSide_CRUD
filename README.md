@@ -32,6 +32,7 @@ Allow a user to run a script using NodeJS Inquirer to prompt the user to CRUD a 
 
 This product establishes the skill of setting up the server side scripts to return data. Also demonstrates understanding of how to combine data across multiple tables.
 
+[Video Demo](https://drive.google.com/file/d/1MC_mySE1Y7tcdvoZapjBrcCMmsQlYoYd/view?usp=sharing)
 _ _ _ _
 
 ## Technology
