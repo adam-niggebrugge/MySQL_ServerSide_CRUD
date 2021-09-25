@@ -56,7 +56,7 @@ npm install console.table
 
 ```
 
-Be sure to navigate to the folder location of the database scripts prior to executing the next commands.
+Be sure to navigate to the folder location of the database scripts prior to executing the next commands. NOTE seeds is to give data to play with.
 
 ```
 mysql -u root -p <your password>
