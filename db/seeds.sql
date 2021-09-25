@@ -30,10 +30,15 @@ VALUES
 
 
 -- seed managers
+
+INSERT INTO manager (id, first_name, last_name, role_id)
+VALUES  
+    (1001,"Ella","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Customer Service")))
+;
+
 INSERT INTO manager (first_name, last_name, role_id)
 VALUES  
-    ("Ella","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Customer Service")))
-,   ("Ella","Dog", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Receiving")))
+    ("Ella","Dog", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Receiving")))
 ,   ("Rachel","Meow", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Engineering")))
 ,   ("Meredith","Fine", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Accounting")))
 ,   ("Rachel","Cat", (SELECT id FROM role WHERE title = "Manager" AND department_id = (SELECT id FROM department WHERE name="Sales")))
