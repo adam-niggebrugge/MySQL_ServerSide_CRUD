@@ -41,6 +41,8 @@ NodeJS, MySQL, Javascript
 
 ## Installation
 
+If starting from scratch, open your preferred terminal and run the following:
+
 ```
 
 npm init
@@ -57,7 +59,15 @@ npm install console.table
 
 ```
 
-Be sure to navigate to the folder location of the database scripts prior to executing the next commands. NOTE seeds is to give data to play with.
+If cloning this repository use these instructions:
+
+```
+
+npm install
+
+```
+
+Be sure to navigate to the folder location of the database scripts prior to executing the next commands. NOTE seeds is to give data to play with and not necessary to fun the application.
 
 ```
 mysql -u root -p <your password>
